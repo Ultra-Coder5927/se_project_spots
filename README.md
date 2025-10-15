@@ -34,3 +34,9 @@ Techniques:
 
 ### Mobile View (320px)
 ![Mobile view of the website with overflow view](./screenshots/Screenshot%20(67)-min.jpg)
+
+## Live Demo
+🔗[View the live project](https://github.com/Ultra-Coder5927/se_project_spots.git)
+
+## Project Pitch Video
+Here is the link to my pitch video [Spots Pitch Video] (https://drive.google.com/file/d/15LiZ7Z6DShXhPcdNLL877HrJEd2n1Ofw/view?usp=sharing) where i describe the projects and its challenges.
