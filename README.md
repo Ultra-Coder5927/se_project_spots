@@ -2,20 +2,35 @@
 
 ### Overview  
 
-* Intro  
+* Project Description  
 * Figma  
 * Images  
   
-**Intro**
+**Project Description**
   
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
+In this project I created a websight that would be responsive to the platform the viewer would be viewing the webpage from. Depending on the size of the screen, the websight itself will grow or shrink to best accomidate its size.  
   
-**Figma**  
+**Technologies and Techniques**  
   
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
+Technologies:
+- HTML and CSS for structure and styling
+- Git for cloneing and publishing
+
+Techniques:
+- Responsive design
+- CSS flex grid for layout
+- Flat BEM file structure for better organization, easier maintenance and better      structure
   
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+## Responsive Design Features
+
+### Desktop View (1440px)
+![Desktop view of the website](./screenshots/Screenshot%20(64)-min.jpg)
+
+### Tablet View (768px)
+![Tablet view of the website](./screenshots/Screenshot%20(65)-min.jpg)
+
+### Mobile View (320px)
+![Mobile view of the website](./screenshots/Screenshot%20(66)-min.jpg)
+
+### Mobile View (320px)
+![Mobile view of the website with overflow view](./screenshots/Screenshot%20(67)-min.jpg)
