@@ -1,130 +1,122 @@
-.profile{
-    display: flex;
-    padding: 34px 0 20px;
-    border-bottom: 1px rgba(33, 33, 33, .4) solid;
+.profile {
+  display: flex;
+  padding: 34px 0 20px;
+  border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
 }
 
-.profile__avitar{
-    width: 190px;
-    height: 190px;
-    border-radius: 8px;
+.profile__avitar {
+  width: 190px;
+  height: 190px;
+  border-radius: 8px;
 }
 
-.profile__column{
-    display: flex;
+.profile__column {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 20px;
+}
+
+.profile__name {
+  margin: 0 0 12px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width: 420px;
+}
+
+.profile__description {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  font-style: regular;
+  line-height: 1;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width: 420px;
+}
+
+.profile__edit-profile {
+  margin-top: auto;
+  gap: 8px;
+  opacity: 70%;
+  border-style: none;
+  background: none;
+  text-align: left;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.profile__edit-profile:hover {
+  opacity: 100%;
+  cursor: pointer;
+}
+
+.profile__new-post {
+  margin-left: auto;
+  padding: 20px 24px 20px 32px;
+  width: 149px;
+  align-self: flex-end;
+  white-space: nowrap;
+  color: #fcf5e5;
+  background-color: #212121;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.profile__new-post:hover {
+  opacity: 80%;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 630px) {
+  .profile {
     flex-direction: column;
-    margin: 0 0 0 20px;
-}
+    align-items: center;
+    text-align: center;
+    max-width: 288px;
+    padding-top: 20px;
+  }
 
-.profile__name{
-    margin: 0 0 12px;
-    font-weight: 500;
-    font-size: 32px;
-    line-height: 1;
-    display: -webkit-box;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    max-width: 420px;
-}
+  .profile__avitar {
+    margin-right: 0;
+    width: 80px;
+    height: 80px;
+    padding-bottom: 12px;
+  }
 
-.profile__description{
+  .profile__column {
+    margin: 0 0 20px;
+  }
+
+  .profile__name {
+    margin-bottom: 6px;
+    font-size: 20px;
+    max-width: 288px;
+  }
+
+  .profile__description {
+    margin-bottom: 32px;
+    max-width: 288px;
+  }
+
+  .profile__edit-profile {
+    text-align: center;
+    padding: 0;
+  }
+
+  .profile__new-post {
     margin: 0;
-    font-weight: 500;
-    font-size: 16px;
-    font-style: regular;
-    line-height: 1;
-    display: -webkit-box;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    max-width: 420px;
-}
-
-.profile__edit-profile{
-    margin-top: auto;
-    gap: 8px;
-    opacity: 70%;
-    border-style: none;
-    background: none;
-    text-align: left;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1;
-}
-
-.profile__edit-profile:hover{
-    opacity: 100%;
-    cursor: pointer;
-}
-
-.profile__new-post{
-    margin-left: auto;
-    padding: 20px 24px 20px 32px;
-    width: 149px;
-    align-self: flex-end;
-    white-space: nowrap;
-    color: #fcf5e5;
-    background-color: #212121;
-    border-radius: 8px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1;
-}
-
-.profile__new-post:hover{
-    opacity: 80%;
-    cursor: pointer;
-}
-
-@media screen AND (max-width: 1320px){
-    .profile{
-        max-width: 846px;
-        min-width: 596ps;
-    }
-}
-
-@media screen and (max-width: 630px){
-    .profile{
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        max-width: 288px;
-        padding-top: 20px;
-    }
-
-    .profile__avitar{
-        margin-right: 0;
-        width: 80px;
-        height: 80px;
-        padding-bottom: 12px;
-    }
-
-    .profile__column{
-        margin: 0 0 20px;
-    }
-
-    .profile__name{
-        margin-bottom: 6px;
-        font-size: 20px;
-        max-width: 288px;
-    }
-
-    .profile__description{
-        margin-bottom: 32px;
-        max-width: 288px;
-    }
-
-    .profile__edit-profile{
-        text-align: center;
-        padding: 0;
-
-    }
-
-    .profile__new-post{
-        margin: 0;
-        width: 100%;
-    }
+    width: 100%;
+  }
 }
