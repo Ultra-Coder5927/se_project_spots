@@ -43,7 +43,7 @@ Techniques:
 
 ## Live Demo
 
-🔗[View the live project](https://github.com/Ultra-Coder5927/se_project_spots)
+🔗[View the live project](https://ultra-coder5927.github.io/se_project_spots)
 
 ## Project Pitch Video
 
