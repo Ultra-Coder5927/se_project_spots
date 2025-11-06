@@ -1,11 +1,11 @@
 const editProfile = document.querySelector(".profile__edit-profile");
-const editProfile__modal = document.querySelector("#edit-profile-modal");
-const modalClose__profile = editProfile__modal.querySelector(
+const edit__Profile__modal = document.querySelector("#edit-profile-modal");
+const modalClose__profile = edit__Profile__modal.querySelector(
   ".modal__close-button"
 );
-const editProfileForm = editProfile__modal.querySelector(".modal__form");
-const currentName = editProfile__modal.querySelector("#profile-name-input");
-const currentDescription = editProfile__modal.querySelector(
+const editProfileForm = edit__Profile__modal.querySelector(".modal__form");
+const currentName = edit__Profile__modal.querySelector("#profile-name-input");
+const currentDescription = edit__Profile__modal.querySelector(
   "#profile-description-input"
 );
 
@@ -21,15 +21,23 @@ const currentCaption = newPost__modal.querySelector("#card-caption-input");
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
 
+function openModal(modal) {
+  modal.classList.add("modal_is-open");
+}
+
+function closeModal(modal) {
+  modal.classList.remove("modal_is-open");
+}
+
 editProfile.addEventListener("click", function () {
   currentName.value = profileName.textContent;
   currentDescription.value = profileDescription.textContent;
 
-  editProfile__modal.classList.add("modal_is-open");
+  openModal(edit__Profile__modal);
 });
 
 modalClose__profile.addEventListener("click", function () {
-  editProfile__modal.classList.remove("modal_is-open");
+  edit__Profile__modal.classList.remove("modal_is-open");
 });
 
 function handleEditProfileSubmit(evt) {
@@ -38,17 +46,17 @@ function handleEditProfileSubmit(evt) {
   profileName.textContent = currentName.value;
   profileDescription.textContent = currentDescription.value;
 
-  editProfile__modal.classList.remove("modal_is-open");
+  closeModal(edit__Profile__modal);
 }
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 
 newPost.addEventListener("click", function () {
-  newPost__modal.classList.add("modal_is-open");
+  openModal(newPost__modal);
 });
 
 modalClose__newPost.addEventListener("click", function () {
-  newPost__modal.classList.remove("modal_is-open");
+  closeModal(newPost__modal);
 });
 
 function handleAddCardSubmit(evt) {
@@ -57,7 +65,7 @@ function handleAddCardSubmit(evt) {
   console.log(currentImage.value);
   console.log(currentCaption.value);
 
-  newPost__modal.classList.remove("modal_is-open");
+  closeModal(newPost__modal);
 }
 
 newPostForm.addEventListener("submit", handleAddCardSubmit);

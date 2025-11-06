@@ -33,7 +33,7 @@
   margin: 0;
   font-weight: 500;
   font-size: 16px;
-  font-style: regular;
+  color: #212121b2;
   line-height: 1;
   display: -webkit-box;
   overflow: hidden;
@@ -53,6 +53,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
+  cursor: pointer;
 }
 
 .profile__edit-profile:hover {
@@ -72,6 +73,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
+  cursor: pointer;
 }
 
 .profile__new-post:hover {

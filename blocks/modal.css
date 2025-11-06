@@ -17,6 +17,7 @@
 .modal_is-open {
   visibility: visible;
   opacity: 1;
+  transition: visibility 0.5s linear 0s, opacity 0.5s linear;
 }
 
 .modal__container {
@@ -26,6 +27,7 @@
   background-color: #ffffff;
   padding: 32px 50px;
   position: relative;
+  box-sizing: border-box;
 }
 
 .modal__close-button {
@@ -40,8 +42,9 @@
   opacity: 40%;
 }
 
-.modal_close-button:hover {
+.modal__close-button:hover {
   opacity: 100%;
+  cursor: pointer;
 }
 
 .modal__title {
@@ -90,11 +93,13 @@
   border-radius: 8px;
   width: 156px;
   padding: 18px 58px;
+  box-sizing: border-box;
   color: #fcf5e5;
   background-color: #212121;
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 630px) {
