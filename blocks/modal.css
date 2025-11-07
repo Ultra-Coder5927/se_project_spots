@@ -104,15 +104,25 @@
 
 @media screen and (max-width: 630px) {
   .modal__container {
-    max-width: 300px;
+    padding: 22px 12px 12px;
   }
 
   .modal__title {
     font-size: 20px;
   }
 
+  .modal__input {
+    font-size: 16px;
+  }
+
   .modal__form {
     gap: 24px;
+  }
+
+  .modal__close-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
   }
 
   .modal__save {
