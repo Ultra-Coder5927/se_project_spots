@@ -29,7 +29,7 @@ const initialCards = [
   },
 ];
 
-const editProfile = document.querySelector(".profile__edit-profile");
+const editProfileButton = document.querySelector(".profile__edit-button");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const modalCloseProfile = editProfileModal.querySelector(
   ".modal__close-button"
@@ -55,7 +55,7 @@ const cardTemplate = document.querySelector("#card-template");
 
 const previewModal = document.querySelector("#preview-modal");
 const previewModalClose = previewModal.querySelector(
-  ".modal__close__type__preview"
+  ".modal__close-type_preview"
 );
 const modalImageContainer = previewModal.querySelector(
   ".modal__image-container"
@@ -105,7 +105,7 @@ function getCardElement(data) {
   return cardElement;
 }
 
-editProfile.addEventListener("click", function () {
+editProfileButton.addEventListener("click", function () {
   currentName.value = profileName.textContent;
   currentDescription.value = profileDescription.textContent;
 
@@ -145,6 +145,7 @@ function handleAddCardSubmit(evt) {
 
   console.log(currentImage.value);
   cardsList.prepend(cardElement);
+  newPostForm.reset();
   closeModal(newPostModal);
 }
 

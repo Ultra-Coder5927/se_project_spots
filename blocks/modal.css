@@ -14,7 +14,7 @@
   transition: visibility 0.5s linear 0s, opacity 0.5s linear;
 }
 
-.modal__type__preview {
+.modal_type_preview {
   padding: 0 16px;
 }
 
@@ -76,14 +76,14 @@
   cursor: pointer;
 }
 
-.modal__close__type__preview {
+.modal__close-type_preview {
   top: 0;
   right: -52.5px;
   opacity: 1;
   cursor: pointer;
 }
 
-.modal__close__type__preview:hover {
+.modal__close-type_preview:hover {
   opacity: 40%;
   cursor: pointer;
 }
@@ -143,6 +143,11 @@
   cursor: pointer;
 }
 
+.modal__save:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 630px) {
   .modal__container {
     padding: 22px 12px 12px;
@@ -179,7 +184,7 @@
     font-size: 16px;
   }
 
-  .modal__close__type__preview {
+  .modal__close-type_preview {
     top: -48px;
     right: 0;
   }
