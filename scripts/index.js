@@ -1,5 +1,9 @@
 const initialCards = [
   {
+    name: "Golden Gate Bridge",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
+  },
+  {
     name: "Val Thorens",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg",
   },
@@ -46,12 +50,59 @@ const currentCaption = newPostModal.querySelector("#card-caption-input");
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
 
+const cardsList = document.querySelector(".cards__list");
+const cardTemplate = document.querySelector("#card-template");
+
+const previewModal = document.querySelector("#preview-modal");
+const previewModalClose = previewModal.querySelector(
+  ".modal__close__type__preview"
+);
+const modalImageContainer = previewModal.querySelector(
+  ".modal__image-container"
+);
+const modalImage = previewModal.querySelector(".modal__image");
+const modalCaption = previewModal.querySelector(".modal__caption");
+
 function openModal(modal) {
   modal.classList.add("modal_is-open");
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-open");
+}
+
+previewModalClose.addEventListener("click", () => {
+  closeModal(previewModal);
+});
+
+function getCardElement(data) {
+  const cardElement = cardTemplate.content.cloneNode(true);
+  const cardImage = cardElement.querySelector(".card__image");
+  const cardDescription = cardElement.querySelector(".card__description");
+
+  cardImage.src = data.link;
+  cardImage.alt = data.name;
+  cardDescription.textContent = data.name;
+
+  const likeButton = cardElement.querySelector(".card__like-button");
+  likeButton.addEventListener("click", function () {
+    likeButton.classList.toggle("card__like-button_is-liked");
+  });
+
+  const deleteButton = cardElement.querySelector(".card__delete-button");
+  deleteButton.addEventListener("click", function () {
+    const cardElement = deleteButton.closest(".card");
+    cardElement.remove();
+  });
+
+  cardImage.addEventListener("click", function () {
+    modalCaption.textContent = data.name;
+    modalImage.src = data.link;
+    modalImage.alt = data.name;
+    openModal(previewModal);
+  });
+
+  return cardElement;
 }
 
 editProfile.addEventListener("click", function () {
@@ -62,7 +113,7 @@ editProfile.addEventListener("click", function () {
 });
 
 modalCloseProfile.addEventListener("click", function () {
-  editProfileModal.classList.remove("modal_is-open");
+  closeModal(editProfileModal);
 });
 
 function handleEditProfileSubmit(evt) {
@@ -87,15 +138,19 @@ modalCloseNewPost.addEventListener("click", function () {
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
 
-  console.log(currentImage.value);
-  console.log(currentCaption.value);
+  const cardElement = getCardElement({
+    name: currentCaption.value,
+    link: currentImage.value,
+  });
 
+  console.log(currentImage.value);
+  cardsList.prepend(cardElement);
   closeModal(newPostModal);
 }
 
 newPostForm.addEventListener("submit", handleAddCardSubmit);
 
 initialCards.forEach(function (item) {
-  console.log(item.name);
-  console.log(item.link);
+  const cardElement = getCardElement(item);
+  cardsList.append(cardElement);
 });
