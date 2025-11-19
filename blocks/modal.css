@@ -12,6 +12,7 @@
   padding: 10px;
   opacity: 0;
   transition: visibility 0.5s linear 0s, opacity 0.5s linear;
+  z-index: 9999;
 }
 
 .modal_type_preview {
@@ -57,6 +58,7 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 120%;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 .modal__close-button {
@@ -76,14 +78,14 @@
   cursor: pointer;
 }
 
-.modal__close-type_preview {
+.modal__close-button_type_preview {
   top: 0;
   right: -52.5px;
   opacity: 1;
   cursor: pointer;
 }
 
-.modal__close-type_preview:hover {
+.modal__close-button_type_preview:hover {
   opacity: 40%;
   cursor: pointer;
 }
@@ -184,7 +186,7 @@
     font-size: 16px;
   }
 
-  .modal__close-type_preview {
+  .modal__close-button_type_preview {
     top: -48px;
     right: 0;
   }

@@ -54,8 +54,8 @@ const cardsList = document.querySelector(".cards__list");
 const cardTemplate = document.querySelector("#card-template");
 
 const previewModal = document.querySelector("#preview-modal");
-const previewModalClose = previewModal.querySelector(
-  ".modal__close-type_preview"
+const previewModalCloseButton = previewModal.querySelector(
+  ".modal__close-button_type_preview"
 );
 const modalImageContainer = previewModal.querySelector(
   ".modal__image-container"
@@ -71,7 +71,7 @@ function closeModal(modal) {
   modal.classList.remove("modal_is-open");
 }
 
-previewModalClose.addEventListener("click", () => {
+previewModalCloseButton.addEventListener("click", () => {
   closeModal(previewModal);
 });
 
