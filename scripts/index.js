@@ -42,6 +42,7 @@ const currentDescription = editProfileModal.querySelector(
 
 const newPost = document.querySelector(".profile__new-post");
 const newPostModal = document.querySelector("#new-post-modal");
+const cardSubmitButton = newPostModal.querySelector(".modal__save");
 const modalCloseNewPost = newPostModal.querySelector(".modal__close-button");
 const newPostForm = newPostModal.querySelector(".modal__form");
 const currentImage = newPostModal.querySelector("#card-image-input");
@@ -65,10 +66,14 @@ const modalCaption = previewModal.querySelector(".modal__caption");
 
 function openModal(modal) {
   modal.classList.add("modal_is-open");
+  document.addEventListener("keydown", handleEscapeKey);
+  document.addEventListener("click", handleClickOutside);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-open");
+  document.removeEventListener("keydown", handleEscapeKey);
+  document.removeEventListener("click", handleClickOutside);
 }
 
 previewModalCloseButton.addEventListener("click", () => {
@@ -109,12 +114,31 @@ editProfileButton.addEventListener("click", function () {
   currentName.value = profileName.textContent;
   currentDescription.value = profileDescription.textContent;
 
+  resetValidation(editProfileForm, [currentName, currentDescription], settings);
   openModal(editProfileModal);
 });
 
 modalCloseProfile.addEventListener("click", function () {
   closeModal(editProfileModal);
 });
+
+function handleEscapeKey(evt) {
+  if (evt.key === "Escape") {
+    const openModal = document.querySelector(".modal_is-open");
+    if (openModal) {
+      closeModal(openModal);
+    }
+  }
+}
+
+function handleClickOutside(evt) {
+  if (evt.target.classList.contains("modal")) {
+    const openModal = document.querySelector(".modal_is-open");
+    if (openModal) {
+      closeModal(openModal);
+    }
+  }
+}
 
 function handleEditProfileSubmit(evt) {
   evt.preventDefault();
@@ -143,9 +167,9 @@ function handleAddCardSubmit(evt) {
     link: currentImage.value,
   });
 
-  console.log(currentImage.value);
   cardsList.prepend(cardElement);
   newPostForm.reset();
+  disableButton(cardSubmitButton, settings);
   closeModal(newPostModal);
 }
 

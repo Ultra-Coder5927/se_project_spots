@@ -132,6 +132,17 @@
   color: rgba(33, 33, 33, 0.3);
 }
 
+.modal__input_type_error {
+  border: 1px solid rgba(255, 0, 0, 0.6);
+}
+
+.modal__error {
+  color: rgba(255, 0, 0, 0.7);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
 .modal__save {
   border-radius: 8px;
   width: 156px;
@@ -148,6 +159,11 @@
 .modal__save:hover {
   opacity: 0.8;
   cursor: pointer;
+}
+
+.modal__save:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 @media screen and (max-width: 630px) {

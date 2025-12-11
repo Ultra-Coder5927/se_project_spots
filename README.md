@@ -47,4 +47,6 @@ Techniques:
 
 ## Project Pitch Video
 
-Here is the link to my pitch video [Spots Pitch Video] (https://drive.google.com/file/d/15LiZ7Z6DShXhPcdNLL877HrJEd2n1Ofw/view?usp=sharing) where i describe the projects and its challenges.
+Here is the link to my first pitch video [Spots Pitch Video] (https://drive.google.com/file/d/15LiZ7Z6DShXhPcdNLL877HrJEd2n1Ofw/view?usp=sharing) where i describe the projects and its challenges.
+
+Here is the link to my second pitch video [Spots Pitch Video] (https://drive.google.com/file/d/15LiZ7Z6DShXhPcdNLL877HrJEd2n1Ofw/view?usp=sharing) where i describe the final result of my project.
