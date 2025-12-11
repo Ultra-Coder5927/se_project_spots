@@ -124,18 +124,18 @@ modalCloseProfile.addEventListener("click", function () {
 
 function handleEscapeKey(evt) {
   if (evt.key === "Escape") {
-    const openModal = document.querySelector(".modal_is-open");
-    if (openModal) {
-      closeModal(openModal);
+    const activeModal = document.querySelector(".modal_is-open");
+    if (activeModal) {
+      closeModal(activeModal);
     }
   }
 }
 
 function handleClickOutside(evt) {
   if (evt.target.classList.contains("modal")) {
-    const openModal = document.querySelector(".modal_is-open");
-    if (openModal) {
-      closeModal(openModal);
+    const activeModal = document.querySelector(".modal_is-open");
+    if (activeModal) {
+      closeModal(activeModal);
     }
   }
 }

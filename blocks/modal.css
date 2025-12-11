@@ -70,7 +70,7 @@
   position: absolute;
   top: 32px;
   right: 50px;
-  opacity: 40%;
+  opacity: 0.4;
 }
 
 .modal__close-button:hover {
@@ -136,7 +136,7 @@
   border: 1px solid rgba(255, 0, 0, 0.6);
 }
 
-.modal__error {
+.modal__error_visible {
   color: rgba(255, 0, 0, 0.7);
   font-size: 16px;
   font-weight: 500;
@@ -161,7 +161,7 @@
   cursor: pointer;
 }
 
-.modal__save:disabled {
+.modal__save_disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
