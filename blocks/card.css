@@ -94,6 +94,11 @@
     height: 288px;
   }
 
+  .card__description {
+    max-width: 250xp;
+    font-size: 16xp;
+  }
+
   .card__content {
     max-width: 100%;
   }
