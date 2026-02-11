@@ -50,3 +50,5 @@ Techniques:
 Here is the link to my first pitch video [Spots Pitch Video] (https://drive.google.com/file/d/15LiZ7Z6DShXhPcdNLL877HrJEd2n1Ofw/view?usp=sharing) where i describe the projects and its challenges.
 
 Here is the link to my second pitch video [Spots Pitch Video] (https://www.loom.com/share/c197a247eae2463cb04636ce332a4ef5) where i describe the final result of my project.
+
+Here is the link to my second pitch video [Spots Pitch Video] (https://www.loom.com/share/aa27d25cc4854cf7b0c5139eb6eb4abf) where i describe the final submission opf my project.

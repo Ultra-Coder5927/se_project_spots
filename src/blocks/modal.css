@@ -11,7 +11,9 @@
   align-items: center;
   padding: 10px;
   opacity: 0;
-  transition: visibility 0.5s linear 0s, opacity 0.5s linear;
+  transition:
+    visibility 0.5s linear 0s,
+    opacity 0.5s linear;
   z-index: 9999;
 }
 
@@ -22,7 +24,9 @@
 .modal_is-open {
   visibility: visible;
   opacity: 1;
-  transition: visibility 0.5s linear 0s, opacity 0.5s linear;
+  transition:
+    visibility 0.5s linear 0s,
+    opacity 0.5s linear;
 }
 
 .modal__container {
@@ -162,7 +166,46 @@
   cursor: pointer;
 }
 
-.modal__save_disabled {
+#delete-modal .modal__close-button {
+  position: absolute;
+  top: 0px;
+  right: -42px;
+  opacity: 100%;
+}
+
+.modal__delete-form {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.modal__delete {
+  background-color: rgba(255, 101, 101, 1);
+  padding: 18px 32px;
+  width: 156px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal__delete:hover {
+  background-color: rgba(255, 51, 51, 1);
+  cursor: pointer;
+}
+
+.modal__cancel {
+  padding: 18px 32px;
+  width: 156px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal__cancel:hover {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(33, 33, 33, 1);
+  cursor: pointer;
+}
+
+.modal__button_disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
