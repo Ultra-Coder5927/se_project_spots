@@ -2,10 +2,12 @@
   display: flex;
   justify-content: center;
   background-color: #ffffffcc;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 .header__logo {
   width: 94px;
   height: 26px;
   padding: 10px 0;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }

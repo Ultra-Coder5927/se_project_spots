@@ -2,6 +2,13 @@
   display: flex;
   padding: 34px 0 20px;
   border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 32px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
 .profile__avatar-container {
@@ -38,12 +45,24 @@
   content: "Edit Avatar";
   color: rgba(255, 255, 255, 1);
   margin-left: 8px;
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
 .profile__column {
   display: flex;
   flex-direction: column;
   margin: 0 0 0 20px;
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
 .profile__name {
@@ -57,6 +76,12 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   max-width: 420px;
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: 0%;
 }
 
 .profile__description {
@@ -83,7 +108,10 @@
   text-align: left;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1;
+  font-family: Poppins;
+  font-style: Medium;
+  line-height: 100%;
+  letter-spacing: 0%;
   cursor: pointer;
 }
 
@@ -104,7 +132,11 @@
   border-radius: 8px;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1;
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: Medium;
+  line-height: 100%;
+  letter-spacing: 0%;
   cursor: pointer;
 }
 

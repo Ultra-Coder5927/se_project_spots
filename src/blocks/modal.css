@@ -15,6 +15,7 @@
     visibility 0.5s linear 0s,
     opacity 0.5s linear;
   z-index: 9999;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 .modal_type_preview {
@@ -185,6 +186,13 @@
   width: 156px;
   border-radius: 8px;
   cursor: pointer;
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 16px;
+  border: none;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
 .modal__delete:hover {
