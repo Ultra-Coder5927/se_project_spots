@@ -1,5 +1,6 @@
 .content {
   padding: 0 20px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 @media screen and (max-width: 630px) {

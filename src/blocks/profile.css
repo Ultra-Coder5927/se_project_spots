@@ -2,18 +2,67 @@
   display: flex;
   padding: 34px 0 20px;
   border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 32px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
-.profile__avitar {
+.profile__avatar-container {
+  position: relative;
+}
+
+.profile__avatar {
   width: 190px;
   height: 190px;
   border-radius: 8px;
+}
+
+.profile__avatar-btn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0 0 12px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
+  visibility: hidden;
+}
+
+.profile__avatar-container:hover .profile__avatar-btn {
+  visibility: visible;
+  cursor: pointer;
+}
+
+.profile__avatar-btn::after {
+  content: "Edit Avatar";
+  color: rgba(255, 255, 255, 1);
+  margin-left: 8px;
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
 .profile__column {
   display: flex;
   flex-direction: column;
   margin: 0 0 0 20px;
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
 .profile__name {
@@ -27,6 +76,12 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   max-width: 420px;
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: 0%;
 }
 
 .profile__description {
@@ -53,7 +108,10 @@
   text-align: left;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1;
+  font-family: Poppins;
+  font-style: Medium;
+  line-height: 100%;
+  letter-spacing: 0%;
   cursor: pointer;
 }
 
@@ -74,7 +132,11 @@
   border-radius: 8px;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1;
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: Medium;
+  line-height: 100%;
+  letter-spacing: 0%;
   cursor: pointer;
 }
 
@@ -92,11 +154,35 @@
     padding-top: 20px;
   }
 
-  .profile__avitar {
+  .profile__avatar-container {
+    position: relative;
+  }
+
+  .profile__avatar-btn {
+    visibility: visible;
+    background-color: transparent;
+  }
+
+  .profile__avatar-btn::after {
+    content: "";
+  }
+
+  .profile__avatar {
     margin-right: 0;
     width: 80px;
     height: 80px;
     margin-bottom: 12px;
+  }
+
+  .profile__pencil-icon {
+    position: absolute;
+    opacity: 1;
+    top: 52px;
+    left: 52px;
+    border-radius: 6px;
+    gap: 8px;
+    padding: 4px;
+    background-color: rgba(33, 33, 33, 0.6);
   }
 
   .profile__column {
